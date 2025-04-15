@@ -18,7 +18,7 @@ export default function ProjectsPage() {
           {projects.data.map((project, idx) => (
             <div
               key={idx}
-              className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 shadow"
+              className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 shadow flex flex-col justify-between h-full"
             >
               <h3 className="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-2">
                 {project.title}

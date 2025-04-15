@@ -1,25 +1,24 @@
 {
   "data": [
     {
-      "title": "Micro Frontend Platform",
-      "description": "Scalable micro-frontend architecture using single-spa for modular deployments.",
-      "tech": ["React", "single-spa", "Webpack", "Tailwind"],
-      "github": "#",
-      "live": "#"
+      "title": "WorkFlow Automation Builder",
+      "description": "A tool for building and managing workflows with a drag-and-drop interface.",
+      "tech": [
+        "React",
+        "react-flow",
+        "react-hook-form",
+        "styled-components",
+        "context-api"
+      ],
+      "github": "https://github.com/sonamguptacs/WorkFlow-Automation-Builder",
+      "live": "https://work-flow-automation-builder.vercel.app/"
     },
     {
-      "title": "Reusable Component Library",
-      "description": "UI library of reusable components like grids, charts, and modals.",
-      "tech": ["React", "TypeScript", "Storybook"],
-      "github": "#",
-      "live": "#"
-    },
-    {
-      "title": "Performance Dashboard",
-      "description": "Dashboard for performance profiling and logging to reduce debugging time.",
-      "tech": ["Next.js", "Jest", "React Testing Library"],
-      "github": "#",
-      "live": "#"
+      "title": "Task Board",
+      "description": "A task management tool that allows users to create, update, and delete tasks.",
+      "tech": ["React"],
+      "github": "https://github.com/sonamguptacs/task_board",
+      "live": "https://task-board-ten-sandy.vercel.app/"
     }
   ]
 }
