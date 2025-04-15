@@ -1,8 +1,22 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  .animate-blink {
+    animation: blink 1s steps(2, start) infinite;
+  }
+
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
 }
 
 @theme inline {

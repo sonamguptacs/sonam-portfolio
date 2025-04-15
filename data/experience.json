@@ -1,0 +1,37 @@
+{
+  "data": [
+    {
+      "role": "Senior Associate Consultant",
+      "company": "Infosys",
+      "location": "Bengaluru, Karnataka",
+      "duration": "Oct 2024 – Present",
+      "highlights": [
+        "Built micro-frontend architecture with single-spa.",
+        "Improved app performance by 20% with optimizations.",
+        "Led a team of 5 developers to successful releases."
+      ]
+    },
+    {
+      "role": "Software Developer",
+      "company": "iQGateway Pvt Ltd.",
+      "location": "Bengaluru, Karnataka",
+      "duration": "Apr 2022 – Sep 2024",
+      "highlights": [
+        "Developed 15+ reusable UI components.",
+        "Conducted code reviews and performance profiling.",
+        "Mentored 10+ new hires."
+      ]
+    },
+    {
+      "role": "PGT (Computer Science)",
+      "company": "Lucknow Public Schools and Colleges",
+      "location": "Lucknow, India",
+      "duration": "Apr 2015 – Jan 2021",
+      "highlights": [
+        "Taught C and Python to 200+ students.",
+        "Built a digital attendance system.",
+        "Served as CBSE Coordinator."
+      ]
+    }
+  ]
+}

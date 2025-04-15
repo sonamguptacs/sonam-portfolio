@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "title": "Micro Frontend Platform",
+      "description": "Scalable micro-frontend architecture using single-spa for modular deployments.",
+      "tech": ["React", "single-spa", "Webpack", "Tailwind"],
+      "github": "#",
+      "live": "#"
+    },
+    {
+      "title": "Reusable Component Library",
+      "description": "UI library of reusable components like grids, charts, and modals.",
+      "tech": ["React", "TypeScript", "Storybook"],
+      "github": "#",
+      "live": "#"
+    },
+    {
+      "title": "Performance Dashboard",
+      "description": "Dashboard for performance profiling and logging to reduce debugging time.",
+      "tech": ["Next.js", "Jest", "React Testing Library"],
+      "github": "#",
+      "live": "#"
+    }
+  ]
+}

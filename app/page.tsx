@@ -1,103 +1,105 @@
-import Image from "next/image";
+'use client'
 
-export default function Home() {
+import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+import { FaLinkedin, FaGithub, FaStackOverflow } from 'react-icons/fa'
+
+const fullText =
+  'Frontend Developer | React, Next.js, TypeScript | Micro Frontends Enthusiast'
+
+const HomePage = () => {
+  const [typedText, setTypedText] = useState('')
+  const [cursorVisible, setCursorVisible] = useState(true)
+
+  useEffect(() => {
+    let currentIndex = 0
+
+    const typingInterval = setInterval(() => {
+      if (currentIndex < fullText.length) {
+        setTypedText((prev) => prev + (fullText?.[currentIndex] ?? ''))
+        currentIndex++
+      } else {
+        clearInterval(typingInterval)
+      }
+    }, 30)
+
+    const cursorInterval = setInterval(() => {
+      setCursorVisible((prev) => !prev)
+    }, 500)
+
+    return () => {
+      clearInterval(typingInterval)
+      clearInterval(cursorInterval)
+    }
+  }, [])
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] flex items-center justify-center px-6">
+      <div className="text-center max-w-3xl w-full">
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4"
+        >
+          Hi, I'm Sonam Gupta
+        </motion.h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-lg sm:text-xl md:text-2xl text-blue-300 mb-10 h-12"
+        >
+          {typedText}
+          <span className="ml-1">{cursorVisible ? '▌' : ' '}</span>
+        </motion.p>
+
+        <div className="flex justify-center gap-6 mb-6 flex-wrap mt-8">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.linkedin.com/in/sonamguptacs"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-blue-400 text-2xl sm:text-3xl hover:scale-110 transition-transform"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            <FaLinkedin />
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://github.com/sonamguptacs"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-white text-2xl sm:text-3xl hover:scale-110 transition-transform"
           >
-            Read our docs
+            <FaGithub />
+          </a>
+          <a
+            href="https://stackoverflow.com/users/16393002/sonam-gupta"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-400 text-2xl sm:text-3xl hover:scale-110 transition-transform"
+          >
+            <FaStackOverflow />
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="flex justify-center gap-6 flex-wrap">
+          <a
+            href="mailto:mail.sonamgupta@gmail.com"
+            className="bg-blue-600 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 transition"
+          >
+            Contact Me
+          </a>
+          <a
+            href="/Sonam_Gupta_Resume.pdf"
+            download
+            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-full shadow hover:bg-gray-300 transition"
+          >
+            Download Resume
+          </a>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
+
+export default HomePage
