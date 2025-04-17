@@ -89,6 +89,7 @@ export const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
                   ? 'text-blue-400 font-semibold'
                   : 'text-gray-300'
               } hover:text-blue-400`}
+              onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
             </Link>
