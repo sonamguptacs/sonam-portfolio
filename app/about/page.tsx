@@ -13,7 +13,7 @@ export default function AboutPage() {
       >
         <h2 className="text-4xl font-bold mb-6">About Me</h2>
         <p className="text-lg leading-relaxed">
-          I'm a Software Developer with{' '}
+          I&apos;m a Software Developer with{' '}
           <span className="font-semibold">3+ years of experience</span> in
           frontend development, specializing in
           <span className="text-blue-600 dark:text-blue-400">
@@ -26,7 +26,7 @@ export default function AboutPage() {
         <p className="text-lg mt-4 leading-relaxed">
           My expertise lies in building modular applications using best
           practices in state management, testing, and micro-frontend
-          architecture. I'm passionate about clean code, performance
+          architecture. I&apos;m passionate about clean code, performance
           optimization, and contributing to innovative product development.
         </p>
         <p className="text-lg mt-4 leading-relaxed">

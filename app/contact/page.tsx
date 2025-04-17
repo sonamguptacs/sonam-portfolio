@@ -19,8 +19,8 @@ export default function ContactPage() {
       >
         <h2 className="text-4xl font-bold mb-6">Contact Me</h2>
         <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
-          I'm always open to discussing new opportunities or collaborations.
-          Feel free to reach out!
+          I&apos;m always open to discussing new opportunities or
+          collaborations. Feel free to reach out!
         </p>
 
         <div className="flex flex-col items-center gap-4 mb-8">

@@ -42,7 +42,7 @@ const HomePage = () => {
           transition={{ duration: 0.8 }}
           className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4"
         >
-          Hi, I'm Sonam Gupta
+          Hi, I&apos;m Sonam Gupta
         </motion.h1>
 
         <motion.p
