@@ -59,6 +59,7 @@ export const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
                   ? 'text-blue-600 dark:text-blue-400 font-semibold'
                   : 'text-gray-700 dark:text-gray-300'
               }`}
+              prefetch={true}
             >
               {item.name}
             </Link>
@@ -90,6 +91,7 @@ export const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
                   : 'text-gray-300'
               } hover:text-blue-400`}
               onClick={() => setIsMenuOpen(false)}
+              prefetch={true}
             >
               {item.name}
             </Link>
