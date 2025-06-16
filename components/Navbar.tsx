@@ -25,6 +25,7 @@ export const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
     { name: 'Projects', path: '/projects' },
     { name: 'Experience', path: '/experience' },
     { name: 'Contact', path: '/contact' },
+    { name: 'Blog', path: '/blog' },
   ]
 
   return (
