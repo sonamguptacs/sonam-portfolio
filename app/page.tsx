@@ -90,7 +90,7 @@ const HomePage = () => {
             Contact Me
           </a>
           <a
-            href="https://drive.google.com/file/d/1ao_qsJqgYUpD0IKgPu0TG3LiyVwd9SyT/view?usp=sharing"
+            href="https://drive.google.com/file/d/1s0Nrq6D26uDL9CSp8rc_-KxM8mUFbEV-/view?usp=sharing"
             target="_blank"
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-full shadow hover:bg-gray-300 transition"
           >
